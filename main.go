@@ -5,17 +5,9 @@
 package main
 
 // short for 'format'
-import "fmt"
 
 func main() {
-	cards := []string{"Ace of Spades", newCard()}
-	cards = append(cards, "Six of Spades")
-	
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
+	cards := newDeck()
+	cards.print()
 }
 
-func newCard() string {
-	return "Five of Diamonds"
-}
